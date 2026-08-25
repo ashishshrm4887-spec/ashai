@@ -3,231 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AshAI – AI Freelance Services by Ashish Sharma</title>
-  <meta name="description" content="AshAI helps with AI website building, content writing, image generation & editing, and prompt engineering. Honest beginner AI freelancer delivering real results." />
-  <meta name="keywords" content="AI freelancer, AI website, AI content, prompt engineering, Ashish Sharma, AshAI" />
-  <meta property="og:title" content="AshAI – AI Freelance Services" />
-  <meta property="og:description" content="Practical AI help for websites, content, images and more." />
-  <meta property="og:type" content="website" />
+  <title>ASHAI — Ashish Sharma | AI & Web Portfolio</title>
+  <meta name="description" content="ASHAI — the portfolio of Ashish Sharma, showcasing AI, web development, creative technology and projects." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: { DEFAULT: '#4f46e5', hover: '#4338ca', light: '#eef2ff' }
-          }
-        }
-      }
+      theme: { extend: { colors: { ink:'#070812', violet:'#7c3aed', cyan:'#22d3ee' } } }
     }
   </script>
   <style>
-    html { scroll-behavior: smooth; }
-    *:focus-visible { outline: 2px solid #4f46e5; outline-offset: 2px; }
+    html{scroll-behavior:smooth}
+    body{background:#070812;color:#f8fafc;overflow-x:hidden}
+    ::selection{background:#7c3aed;color:white}
+    .grid-bg{background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:42px 42px}
+    .orb{filter:blur(1px);animation:float 7s ease-in-out infinite}
+    .orb2{animation:float2 9s ease-in-out infinite}
+    .pulse-ring{animation:pulseRing 3s ease-out infinite}
+    .shine{position:relative;overflow:hidden}
+    .shine:after{content:"";position:absolute;inset:0;transform:translateX(-120%);background:linear-gradient(100deg,transparent,rgba(255,255,255,.13),transparent);animation:shine 5s infinite}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+    .reveal.show{opacity:1;transform:none}
+    .card{transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+    .card:hover{transform:translateY(-7px);border-color:rgba(124,58,237,.55);box-shadow:0 20px 60px rgba(76,29,149,.22)}
+    .gradient-text{background:linear-gradient(90deg,#fff,#c4b5fd,#67e8f9);-webkit-background-clip:text;background-clip:text;color:transparent}
+    @keyframes float{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(25px,-30px,0)}}
+    @keyframes float2{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(-30px,25px,0)}}
+    @keyframes pulseRing{0%{transform:scale(.8);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+    @keyframes shine{0%{transform:translateX(-120%)}45%,100%{transform:translateX(120%)}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
   </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
-  <!-- Header -->
-  <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur-md">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-      <a href="index.html" class="flex items-center gap-2.5">
-        <!-- Clean SVG Logo -->
-        <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="17" stroke="#4F46E5" stroke-width="2.5" fill="none"/>
-          <path d="M13 27 L20 12 L27 27 Z" stroke="#4F46E5" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
-          <circle cx="20" cy="20" r="2.8" fill="#4F46E5"/>
-        </svg>
-        <span class="text-xl font-bold tracking-tight text-slate-800">Ash<span class="text-indigo-600">AI</span></span>
+<body class="antialiased">
+  <div class="fixed inset-0 -z-10 grid-bg"></div>
+  <div class="fixed -z-10 left-[-120px] top-[80px] h-[320px] w-[320px] rounded-full bg-violet-700/20 blur-[90px] orb"></div>
+  <div class="fixed -z-10 right-[-100px] top-[420px] h-[300px] w-[300px] rounded-full bg-cyan-500/10 blur-[100px] orb2"></div>
+
+  <header class="fixed top-0 z-50 w-full border-b border-white/10 bg-[#070812]/70 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+      <a href="index.html" class="group flex items-center gap-3">
+        <span class="relative flex h-10 w-10 items-center justify-center rounded-xl border border-violet-400/40 bg-violet-500/10 font-black text-violet-300 shadow-lg shadow-violet-900/20">A<span class="absolute h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_15px_#22d3ee]" style="right:7px;top:7px"></span></span>
+        <span class="text-xl font-black tracking-tight">ASH<span class="text-violet-400">AI</span></span>
       </a>
-      <nav class="hidden items-center gap-8 md:flex">
-        <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600">Home</a>
-        <a href="services.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600">Services</a>
-        <a href="work.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600">Work</a>
-        <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600">About</a>
-        <a href="contact.html" class="rounded-full bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700">Get Free Quote</a>
+      <nav class="hidden items-center gap-7 md:flex">
+        <a href="#home" class="text-sm text-slate-300 transition hover:text-white">Home</a>
+        <a href="#about" class="text-sm text-slate-300 transition hover:text-white">About</a>
+        <a href="#skills" class="text-sm text-slate-300 transition hover:text-white">Skills</a>
+        <a href="#projects" class="text-sm text-slate-300 transition hover:text-white">Projects</a>
+        <a href="#contact" class="rounded-full bg-white px-5 py-2.5 text-sm font-bold text-slate-950 transition hover:bg-violet-200">Contact</a>
       </nav>
-      <button id="menuBtn" class="md:hidden p-2 text-slate-700" aria-label="Open menu">
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
+      <button id="menuBtn" class="rounded-lg border border-white/10 p-2 text-slate-200 md:hidden" aria-label="Open menu">☰</button>
     </div>
-    <div id="mobileMenu" class="hidden border-t border-slate-100 bg-white px-4 py-4 md:hidden">
-      <nav class="flex flex-col gap-3">
-        <a href="index.html" class="rounded-lg px-3 py-2.5 text-base font-medium text-slate-700">Home</a>
-        <a href="services.html" class="rounded-lg px-3 py-2.5 text-base font-medium text-slate-700">Services</a>
-        <a href="work.html" class="rounded-lg px-3 py-2.5 text-base font-medium text-slate-700">Work</a>
-        <a href="about.html" class="rounded-lg px-3 py-2.5 text-base font-medium text-slate-700">About</a>
-        <a href="contact.html" class="mt-2 rounded-full bg-indigo-600 px-5 py-3 text-center text-base font-semibold text-white">Get Free Quote</a>
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-[#070812]/95 px-5 py-4 md:hidden">
+      <nav class="flex flex-col gap-2">
+        <a href="#home" class="rounded-lg px-3 py-3 text-slate-200">Home</a><a href="#about" class="rounded-lg px-3 py-3 text-slate-200">About</a><a href="#skills" class="rounded-lg px-3 py-3 text-slate-200">Skills</a><a href="#projects" class="rounded-lg px-3 py-3 text-slate-200">Projects</a><a href="#contact" class="rounded-lg bg-violet-600 px-3 py-3 text-center font-bold">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="bg-white">
-      <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24 lg:py-28">
-        <div class="mx-auto max-w-3xl text-center">
-          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-indigo-100 bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700">
-            <span class="h-2 w-2 rounded-full bg-indigo-500"></span>
-            AI Freelance Services • Kolkata, India
+  <main id="home">
+    <section class="relative mx-auto flex min-h-screen max-w-6xl items-center px-5 pb-20 pt-32 sm:px-6">
+      <div class="grid w-full gap-14 lg:grid-cols-[1.15fr_.85fr] lg:items-center">
+        <div class="reveal">
+          <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-violet-400/20 bg-violet-500/10 px-4 py-2 text-sm text-violet-200"><span class="h-2 w-2 animate-pulse rounded-full bg-emerald-400"></span>Building with AI • Web • Creativity</div>
+          <h1 class="max-w-4xl text-5xl font-black leading-[1.02] tracking-[-.04em] sm:text-6xl lg:text-7xl">I build <span class="gradient-text">digital experiences</span> with AI.</h1>
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-400 sm:text-xl">Hi, I’m Ashish Sharma. ASHAI is my portfolio and creative lab where I explore AI, websites, coding, design and new digital ideas.</p>
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#projects" class="shine rounded-full bg-violet-600 px-7 py-3.5 text-center font-bold shadow-xl shadow-violet-900/30 transition hover:bg-violet-500">Explore my work →</a>
+            <a href="#contact" class="rounded-full border border-white/15 bg-white/5 px-7 py-3.5 text-center font-bold text-white transition hover:bg-white/10">Let’s connect</a>
           </div>
-          <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
-            Practical AI help that <span class="text-indigo-600">actually works</span>
-          </h1>
-          <p class="mt-6 text-lg leading-relaxed text-slate-600 sm:text-xl">
-            I help small businesses and creators with AI websites, content, images and prompts. Honest beginner. Real results. Affordable rates.
-          </p>
-          <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a href="contact.html" class="inline-flex w-full items-center justify-center rounded-full bg-indigo-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-indigo-200 hover:bg-indigo-700 sm:w-auto">Get a Free Quote</a>
-            <a href="services.html" class="inline-flex w-full items-center justify-center rounded-full border border-slate-200 bg-white px-8 py-3.5 text-base font-semibold text-slate-800 hover:bg-slate-50 sm:w-auto">View Services</a>
-          </div>
+        </div>
+        <div class="reveal relative mx-auto h-[360px] w-full max-w-[420px]">
+          <div class="absolute inset-10 rounded-full border border-violet-400/20"></div><div class="pulse-ring absolute inset-20 rounded-full border border-cyan-300/20"></div>
+          <div class="absolute inset-[23%] rounded-[35%] border border-white/10 bg-white/[.035] shadow-2xl shadow-violet-950/40 backdrop-blur-xl" style="transform:rotate(12deg)"></div>
+          <div class="absolute inset-[28%] rounded-[30%] bg-gradient-to-br from-violet-600/70 via-fuchsia-500/30 to-cyan-400/30 blur-2xl orb"></div>
+          <div class="absolute inset-[30%] flex items-center justify-center rounded-[30%] border border-white/15 bg-[#0b0d1a]/80 text-6xl font-black shadow-2xl backdrop-blur-xl">A<span class="text-violet-400">I</span></div>
+          <span class="absolute left-2 top-16 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-300">AI + Code</span><span class="absolute bottom-16 right-0 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-300">Create → Iterate</span>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
-    <section class="border-t border-slate-100 bg-slate-50 py-16 md:py-24">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6">
-        <div class="mx-auto max-w-2xl text-center">
-          <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">What I can help you with</h2>
-          <p class="mt-4 text-lg text-slate-600">Clear services. No fluff. Just useful AI work.</p>
-        </div>
-        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
-            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="text-lg font-semibold text-slate-900">AI Website Building</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-600">Modern, fast, mobile-first websites built with AI tools and clean code.</p>
-          </div>
-          <div class="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
-            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
-            </div>
-            <h3 class="text-lg font-semibold text-slate-900">AI Content Writing</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-600">Blog posts, product descriptions, social captions, emails — clear and human-sounding.</p>
-          </div>
-          <div class="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
-            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="text-lg font-semibold text-slate-900">AI Image Generation & Editing</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-600">Custom images, product visuals, social graphics and smart edits using AI.</p>
-          </div>
-          <div class="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
-            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            </div>
-            <h3 class="text-lg font-semibold text-slate-900">Prompt Engineering</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-600">Better prompts = better results. I help you get consistent, high-quality output from AI.</p>
-          </div>
-        </div>
-        <div class="mt-10 text-center">
-          <a href="services.html" class="inline-flex items-center gap-1 text-base font-semibold text-indigo-600 hover:text-indigo-700">See all services →</a>
-        </div>
+    <section id="about" class="border-y border-white/10 bg-white/[.025] py-24">
+      <div class="mx-auto max-w-6xl px-5 sm:px-6">
+        <div class="reveal max-w-3xl"><p class="mb-3 text-sm font-bold uppercase tracking-[.25em] text-violet-300">01 / About</p><h2 class="text-4xl font-black tracking-tight sm:text-5xl">Curious about technology. Serious about building.</h2><p class="mt-6 text-lg leading-8 text-slate-400">I’m learning by building real projects. ASHAI is where I turn ideas into working websites and experiments, while continuously improving my coding, AI and design skills.</p></div>
+        <div class="mt-12 grid gap-5 sm:grid-cols-3"><div class="card reveal rounded-3xl border border-white/10 bg-white/[.04] p-6"><div class="text-3xl font-black text-white">AI</div><p class="mt-2 text-sm text-slate-400">Exploring practical AI tools and applications.</p></div><div class="card reveal rounded-3xl border border-white/10 bg-white/[.04] p-6"><div class="text-3xl font-black text-white">WEB</div><p class="mt-2 text-sm text-slate-400">Building responsive websites with clean, usable interfaces.</p></div><div class="card reveal rounded-3xl border border-white/10 bg-white/[.04] p-6"><div class="text-3xl font-black text-white">BUILD</div><p class="mt-2 text-sm text-slate-400">Learning through experiments, iterations and real projects.</p></div></div>
       </div>
     </section>
 
-    <!-- Why -->
-    <section class="bg-white py-16 md:py-24">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6">
-        <div class="mx-auto max-w-2xl text-center">
-          <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Why work with AshAI?</h2>
-          <p class="mt-4 text-lg text-slate-600">I’m just starting, but I take every project seriously.</p>
-        </div>
-        <div class="mt-12 grid gap-8 sm:grid-cols-2">
-          <div class="flex gap-4">
-            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600">
-              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-slate-900">Honest & Transparent</h3>
-              <p class="mt-1 text-slate-600">I’m a beginner and I tell you exactly what I can deliver. No fake experience claims.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600">
-              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-slate-900">Affordable Starting Rates</h3>
-              <p class="mt-1 text-slate-600">Perfect for small businesses and individuals who want quality without big agency prices.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600">
-              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-slate-900">Fast Communication</h3>
-              <p class="mt-1 text-slate-600">Quick replies, clear updates, and simple process from first message to delivery.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600">
-              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-slate-900">Real Results Focus</h3>
-              <p class="mt-1 text-slate-600">Every project is built to help you get clients, sales or better content — not just look pretty.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section id="skills" class="py-24"><div class="mx-auto max-w-6xl px-5 sm:px-6"><div class="reveal"><p class="mb-3 text-sm font-bold uppercase tracking-[.25em] text-violet-300">02 / Skills</p><h2 class="text-4xl font-black sm:text-5xl">Tools I’m building with</h2></div><div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"><div class="card reveal rounded-3xl border border-white/10 bg-gradient-to-b from-violet-500/10 to-white/[.02] p-6"><div class="mb-6 text-3xl">⌘</div><h3 class="text-xl font-bold">AI & Prompting</h3><p class="mt-2 text-sm leading-6 text-slate-400">AI workflows, prompt engineering and creative experimentation.</p></div><div class="card reveal rounded-3xl border border-white/10 bg-white/[.03] p-6"><div class="mb-6 text-3xl">&lt;/&gt;</div><h3 class="text-xl font-bold">Web Development</h3><p class="mt-2 text-sm leading-6 text-slate-400">HTML, CSS, JavaScript and responsive web interfaces.</p></div><div class="card reveal rounded-3xl border border-white/10 bg-white/[.03] p-6"><div class="mb-6 text-3xl">✦</div><h3 class="text-xl font-bold">UI & Design</h3><p class="mt-2 text-sm leading-6 text-slate-400">Modern visual systems, layouts, motion and interaction ideas.</p></div><div class="card reveal rounded-3xl border border-white/10 bg-white/[.03] p-6"><div class="mb-6 text-3xl">⚡</div><h3 class="text-xl font-bold">Creative Tech</h3><p class="mt-2 text-sm leading-6 text-slate-400">Turning ideas into prototypes, experiments and useful digital products.</p></div></div></div></section>
 
-    <!-- CTA -->
-    <section class="border-t border-slate-100 bg-indigo-600 py-16 md:py-20">
-      <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
-        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to try AI for your business?</h2>
-        <p class="mt-4 text-lg text-indigo-100">Tell me what you need. I’ll reply quickly with a clear quote and timeline.</p>
-        <a href="contact.html" class="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-base font-semibold text-indigo-700 shadow-lg hover:bg-indigo-50">Get Your Free Quote</a>
-      </div>
-    </section>
+    <section id="projects" class="border-y border-white/10 bg-white/[.025] py-24"><div class="mx-auto max-w-6xl px-5 sm:px-6"><div class="reveal"><p class="mb-3 text-sm font-bold uppercase tracking-[.25em] text-violet-300">03 / Projects</p><h2 class="text-4xl font-black sm:text-5xl">Things I’m building</h2><p class="mt-4 max-w-2xl text-slate-400">A growing collection of experiments and projects. This section can expand as new work is completed.</p></div><div class="mt-12 grid gap-6 md:grid-cols-2"><a href="work.html" class="card reveal group rounded-[2rem] border border-white/10 bg-[#0c0e1b] p-7"><div class="mb-10 flex items-center justify-between"><span class="rounded-full bg-violet-500/10 px-3 py-1 text-xs font-bold text-violet-300">FEATURED</span><span class="text-slate-500 transition group-hover:translate-x-1 group-hover:text-white">↗</span></div><h3 class="text-3xl font-black">ASHAI Portfolio</h3><p class="mt-3 leading-7 text-slate-400">This website — an animated personal portfolio and creative technology lab.</p><div class="mt-7 flex flex-wrap gap-2"><span class="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300">HTML</span><span class="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300">Tailwind</span><span class="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300">JavaScript</span></div></a><a href="services.html" class="card reveal group rounded-[2rem] border border-white/10 bg-[#0c0e1b] p-7"><div class="mb-10 flex items-center justify-between"><span class="rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-bold text-cyan-300">EXPERIMENT</span><span class="text-slate-500 transition group-hover:translate-x-1 group-hover:text-white">↗</span></div><h3 class="text-3xl font-black">AI Creative Work</h3><p class="mt-3 leading-7 text-slate-400">Exploring AI-assisted websites, content, images, prompts and creative workflows.</p><div class="mt-7 flex flex-wrap gap-2"><span class="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300">AI</span><span class="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300">Design</span><span class="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300">Automation</span></div></a></div></div></section>
+
+    <section id="contact" class="py-24"><div class="mx-auto max-w-4xl px-5 text-center sm:px-6"><div class="reveal rounded-[2rem] border border-white/10 bg-gradient-to-br from-violet-600/20 via-white/[.03] to-cyan-400/10 p-10 sm:p-16"><p class="text-sm font-bold uppercase tracking-[.25em] text-violet-300">04 / Contact</p><h2 class="mt-4 text-4xl font-black sm:text-6xl">Have an idea?</h2><p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-400">Let’s turn it into something real. Visit the contact page to get in touch.</p><a href="contact.html" class="mt-8 inline-flex rounded-full bg-white px-8 py-4 font-black text-slate-950 transition hover:bg-violet-200">Get in touch →</a></div></div></section>
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-slate-100 bg-white">
-    <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-      <div class="grid gap-8 md:grid-cols-3">
-        <div>
-          <a href="index.html" class="flex items-center gap-2.5">
-            <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="17" stroke="#4F46E5" stroke-width="2.5" fill="none"/>
-              <path d="M13 27 L20 12 L27 27 Z" stroke="#4F46E5" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
-              <circle cx="20" cy="20" r="2.8" fill="#4F46E5"/>
-            </svg>
-            <span class="text-lg font-bold text-slate-800">Ash<span class="text-indigo-600">AI</span></span>
-          </a>
-          <p class="mt-3 text-sm leading-relaxed text-slate-600">Practical AI help for websites, content, images and more. Honest beginner delivering real results.</p>
-        </div>
-        <div>
-          <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-900">Quick Links</h3>
-          <ul class="mt-4 space-y-2">
-            <li><a href="services.html" class="text-sm text-slate-600 hover:text-indigo-600">Services</a></li>
-            <li><a href="work.html" class="text-sm text-slate-600 hover:text-indigo-600">Work</a></li>
-            <li><a href="about.html" class="text-sm text-slate-600 hover:text-indigo-600">About</a></li>
-            <li><a href="contact.html" class="text-sm text-slate-600 hover:text-indigo-600">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-900">Get in Touch</h3>
-          <ul class="mt-4 space-y-2 text-sm text-slate-600">
-            <li><a href="mailto:ashishshrm4887@gmail.com" class="hover:text-indigo-600">ashishshrm4887@gmail.com</a></li>
-            <li>Kolkata, India</li>
-            <li class="pt-2"><a href="contact.html" class="inline-flex items-center gap-1 font-medium text-indigo-600 hover:text-indigo-700">Request a free quote →</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="mt-10 border-t border-slate-100 pt-6 text-center text-sm text-slate-500">
-        © 2026 AshAI by Ashish Sharma. All rights reserved.
-      </div>
-    </div>
-  </footer>
-
+  <footer class="border-t border-white/10 py-8"><div class="mx-auto flex max-w-6xl flex-col gap-3 px-5 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between"><span>© 2026 ASHAI · Ashish Sharma</span><span>Built with curiosity + code.</span></div></footer>
   <script>
-    const btn = document.getElementById('menuBtn');
-    const menu = document.getElementById('mobileMenu');
-    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    const btn=document.getElementById('menuBtn'),menu=document.getElementById('mobileMenu');btn?.addEventListener('click',()=>menu.classList.toggle('hidden'));document.querySelectorAll('#mobileMenu a').forEach(a=>a.addEventListener('click',()=>menu.classList.add('hidden')));
+    const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
   </script>
 </body>
 </html>
